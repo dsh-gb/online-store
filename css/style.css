@@ -397,7 +397,6 @@ body {
     text-decoration: none;
     color: var(--grey-color);
 }
-
 .dropdowns__heading--text {
     margin-left: 10px;
     font-weight: 600;
@@ -447,7 +446,6 @@ body {
 .pagination__link--active {
     color: #EF5B70;
 }
-
 .pagination__link--size {
     padding-top: 3px; 
 }
