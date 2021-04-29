@@ -451,7 +451,7 @@ body {
 .subscribe__form-mail {
     width: 256px;
     height: 49px;
-    padding-left: 22px;
+    padding: 0 0 0 22px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     background-color: #E1E1E1;
@@ -478,6 +478,7 @@ body {
 .subscribe__form-btn {
     width: 100px;
     height: 49px;
+    padding: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: var(--text-color);
