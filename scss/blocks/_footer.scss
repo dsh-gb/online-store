@@ -1,5 +1,5 @@
 .footer {
-    background-color: #222224;
+    background-color: $black-advant;
 
     &__wrapper {
         min-height: 79px;
@@ -8,7 +8,7 @@
     
     &__copy {
         @include font(16px, 400, 20px);
-        color: #FBFBFB;
+        color: $pink-advant;
     }
     
     &__social {
@@ -17,7 +17,7 @@
         &-link {
             @include size(32px, 32px);
             @include flex(row, center, center);
-            background-color: #FFF;
+            background-color: $white;
             margin-left: 7px;
 
             &:hover {
@@ -25,7 +25,7 @@
             }
             
             &:hover svg {
-                fill: #FFF;
+                fill: $white;
             }
         }
     }

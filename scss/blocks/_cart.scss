@@ -29,7 +29,7 @@
         &-description {
             padding: 0 0 6px 32px;
             @include font(22px, 400, 26px);
-            color: #575757;
+            color: $grey-cart;
         }
         
         &-description--quantity {
@@ -42,7 +42,7 @@
             @include size(43px, 24px);
             padding: 0;
             margin-left: 24px;
-            border: 1px solid #EAEAEA;
+            border: 1px solid $pink-cart;
 
             &::placeholder {
                 padding-left: 16px;
@@ -52,7 +52,7 @@
         
         &-exit {
             @include position(350px, 28px);
-            fill: #575757;
+            fill: $grey-cart;
 
             &:hover {
                 fill: $text-color;
@@ -70,14 +70,13 @@
         @include size(235px, 50px);
         margin-bottom: 128px;
         @include flex(row, center, center);
-        border: 1px solid #A4A4A4;
+        border: 1px solid $greyblack;
         text-decoration: none;
         text-transform: uppercase;
-        color: #000;
 
         &:hover {
             border: none;
-            color: #FFF;
+            color: $white;
             background-color: $text-color;
             font-weight: 700;
         }
@@ -100,7 +99,7 @@
         &-input {
             height: 45px;
             margin-top: 20px;
-            border: 1px solid #A4A4A4;
+            border: 1px solid $greyblack;
 
             &::placeholder {
                 padding-left: 17px;
@@ -112,15 +111,15 @@
             @include size(100px, 34px);
             margin-top: 24px;
             @include flex(row, space-around, center);
-            border: 1px solid #A4A4A4;
-            background-color: #FFF;
-            color: #A4A4A4;
+            border: 1px solid $greyblack;
+            background-color: $white;
+            color: $greyblack;
             text-transform: uppercase;
             @include font(11px, 300, 13px);
 
             &:hover {
                 border: none;
-                color: #FFF;
+                color: $white;
                 background-color: $text-color;
                 cursor: pointer;
                 font-weight: 700;
@@ -133,7 +132,7 @@
         @include size(360px, 214px);
         margin-top: 57px;
         position: relative;
-        background-color: #F5F3F3;
+        background-color: $order-fon;
 
         &-sub {
             @include position(218px, 39px);
@@ -159,7 +158,7 @@
 
         &-line {
             @include position(43px, 104px);
-            fill: #E2E2E2;
+            fill: $line-fon;
         }
 
         &-link {
@@ -169,7 +168,7 @@
             background-color: $text-color;
             text-transform: uppercase;
             text-decoration: none;
-            color: #FFF;
+            color: $white;
 
             &:hover {
                 background-color: #FFF;

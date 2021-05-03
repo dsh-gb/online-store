@@ -1,5 +1,5 @@
 .breadcrumb {
-    background-color: #f8f3f4;
+    background-color: $pink-crumb;
 
     &__wrapper {
         min-height: 148px;
@@ -30,7 +30,7 @@
         
         &-link a {
             text-decoration: none;
-            color: #636363;
+            color: $grey-crumb;
         }
         
         &-link:hover a {

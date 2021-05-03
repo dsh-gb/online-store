@@ -18,7 +18,7 @@
         
         &-text {
             @include font(16px, 400, 19px);
-            color: #FFF;
+            color: $white;
         }
         
         &-heading {

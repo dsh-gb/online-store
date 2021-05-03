@@ -4,13 +4,13 @@
     &__heading {
         margin-bottom: 6px;
         @include font(30px, 400, 36px);
-        color: #222222;
+        color: $black-color;
     }
     
     &__text {
         margin-bottom: 48px;
         font-weight: 400;
-        color: #9F9F9F;
+        color: $grey-text;
     }
     
     &__list {
@@ -50,7 +50,7 @@
         &-text {
             margin-bottom: 18px;
             padding: 0 30px 0 18px;
-            color: #5D5D5D;
+            color: $greblack-text;
         }
         
         &-price {
@@ -61,9 +61,9 @@
         &-button {
             @include size(138px, 43px);
             display: none;
-            border: 1px solid #FFF;
+            border: 1px solid $white;
             background-color: rgba(0, 0, 0, 0);
-            color: #FFF;
+            color: $white;
             font-weight: 400;
         }
         
@@ -92,12 +92,12 @@
         @include size(211px, 47px);
         margin-bottom: 96px;
         color: $button-color;
-        border: 1px solid #FF6A6A;
-        background-color: #FFF;
+        border: 1px solid $pinkred;
+        background-color: $white;
 
         &:hover {
-            background-color:#F16D7F;
-            color: #FFF;
+            background-color: $text-color;
+            color: $white;
             cursor: pointer;
         }
     }

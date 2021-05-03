@@ -17,7 +17,7 @@
             width: 360px;
             text-align: center;
             @include font(20px, 400, 24px);
-            color: #222224;
+            color: $black-advant;
         }
         
         &-heading {
@@ -25,7 +25,7 @@
             @include flex(column, normal, center);
             text-transform: uppercase;
             @include font(24px, 700, 38px);
-            color: #222224;
+            color: $black-advant;
 
             &--text {
                 @include font(18px, 400, 30px);
@@ -42,7 +42,7 @@
             padding: 0 0 0 22px;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
-            background-color: #E1E1E1;
+            background-color: $white-bgc;
             border-style: none;
             outline: none;
             text-indent: 0;
@@ -52,7 +52,7 @@
                 font-family: Lato;
                 font-style: normal;
                 @include font(14px, 400, 17px);
-                color: #222224;
+                color: $black-advant;
             }
             
             &:focus::-webkit-input-placeholder {
@@ -67,7 +67,7 @@
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
             background-color: $text-color;
-            color: #FFF;
+            color: $white;
             font-weight: 400;
             border-style: none;
 

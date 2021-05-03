@@ -1,7 +1,7 @@
 .advant {
     height: 341px;
     @include flex(row, normal, center);
-    background-color: #222224;
+    background-color: $black-advant;
 
     &__list {
         @include flex(row, space-between, normal);
@@ -13,13 +13,13 @@
 
         &-heading {
             @include font(20px, 400, 24px);
-            color: #FBFBFB;
+            color: $pink-advant;
         }
         
         &-text {
             padding: 0 30px 0 30px;
             text-align: center;
-            color: #FBFBFB;
+            color: $pink-advant;
         }
     }
 }
