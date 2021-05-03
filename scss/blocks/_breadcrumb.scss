@@ -1,0 +1,41 @@
+.breadcrumb {
+    background-color: #f8f3f4;
+
+    &__wrapper {
+        min-height: 148px;
+        @include flex(row, space-between, center);
+        text-transform: uppercase;
+    }
+    
+    &__heading {
+        @include font(24px, 400, 29px);
+        text-transform: uppercase;
+    }
+    
+    &__list {
+        display: flex;
+        list-style-type: " / ";
+
+        & li:first-child {
+            list-style-type: none;
+        }
+        
+        & li span:last-child {
+            font-weight: 700;
+        }
+        
+        &-link {
+            padding-right: 10px;
+        }
+        
+        &-link a {
+            text-decoration: none;
+            color: #636363;
+        }
+        
+        &-link:hover a {
+            color: $text-color;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,182 @@
+.cart {
+    @include flex(row, space-between, normal);
+
+    &__product {
+        padding-top: 96px;
+    }
+    
+    &__item {
+        @include size(652px, 306px);
+        margin-bottom: 40px;
+        display: flex;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.13);
+
+        &-wrapper {
+            position: relative;
+        }
+        
+        &-image {
+            @include size(262px, 306px);
+        }
+        
+        &-heading {
+            padding: 22px 160px 42px 31px;
+            text-transform: uppercase;
+            color: $black-color;
+            @include font(24px, 400, 29px);
+        }
+        
+        &-description {
+            padding: 0 0 6px 32px;
+            @include font(22px, 400, 26px);
+            color: #575757;
+        }
+        
+        &-description--quantity {
+            padding-bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        &-input {
+            @include size(43px, 24px);
+            padding: 0;
+            margin-left: 24px;
+            border: 1px solid #EAEAEA;
+
+            &::placeholder {
+                padding-left: 16px;
+                @include font(18px, 400, 22px);
+            }
+        }
+        
+        &-exit {
+            @include position(350px, 28px);
+            fill: #575757;
+
+            &:hover {
+                fill: $text-color;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    &__product-button {
+        margin-top: 32px;
+        @include flex(row, space-between, normal);
+    }
+    
+    &__product-link {
+        @include size(235px, 50px);
+        margin-bottom: 128px;
+        @include flex(row, center, center);
+        border: 1px solid #A4A4A4;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+
+        &:hover {
+            border: none;
+            color: #FFF;
+            background-color: $text-color;
+            font-weight: 700;
+        }
+    }
+    
+    &__adress {
+        @include flex(column, normal, normal);
+
+        &-form {
+            @include size(360px, 272px);
+            margin-top: 113px;
+            @include flex(column, normal, normal);
+        }
+
+        &-heading {
+            text-transform: uppercase;
+            @include font(16px, 300, 19px);
+        }
+
+        &-input {
+            height: 45px;
+            margin-top: 20px;
+            border: 1px solid #A4A4A4;
+
+            &::placeholder {
+                padding-left: 17px;
+                color: $black-color;
+            }
+        }
+
+        &-submit {
+            @include size(100px, 34px);
+            margin-top: 24px;
+            @include flex(row, space-around, center);
+            border: 1px solid #A4A4A4;
+            background-color: #FFF;
+            color: #A4A4A4;
+            text-transform: uppercase;
+            @include font(11px, 300, 13px);
+
+            &:hover {
+                border: none;
+                color: #FFF;
+                background-color: $text-color;
+                cursor: pointer;
+                font-weight: 700;
+            }
+        }
+        
+    }
+
+    &__order {
+        @include size(360px, 214px);
+        margin-top: 57px;
+        position: relative;
+        background-color: #F5F3F3;
+
+        &-sub {
+            @include position(218px, 39px);
+            text-transform: uppercase;
+            @include font(11px, 400, 13px);
+
+            &--price {
+                padding-left: 20px;
+            }
+        }
+
+        &-grand {
+            @include position(153px, 64px);
+            text-transform: uppercase;
+            @include font(16px, 300, 19px);
+
+            &--price {
+                padding-left: 20px;
+                font-weight: 700;
+                color: $text-color;
+            }
+        }
+
+        &-line {
+            @include position(43px, 104px);
+            fill: #E2E2E2;
+        }
+
+        &-link {
+            @include size(273px, 50px);
+            @include position(44px, 122px);
+            @include flex(row, center, center);
+            background-color: $text-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #FFF;
+
+            &:hover {
+                background-color: #FFF;
+                color: $text-color;
+                font-weight: 700;
+                border: 1px solid $text-color;
+            }
+        }
+    }
+}
