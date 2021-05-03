@@ -1,0 +1,67 @@
+.header {
+    background-color: $black-color;
+    position: relative;
+    &__wrapper {
+        min-height: 75px;
+        @include flex(row, space-between, center);
+    }
+    
+    &__icon {
+        fill: $fon-icon;
+
+        &--logo {
+            margin-right: 41px;
+        }
+    }
+    
+    &__icon:hover {
+        fill: $button-color;
+        cursor: pointer;
+    } 
+    
+    &__menu {
+        display: flex;
+
+        &-button {
+            border: none;
+            background-color: transparent;
+        }
+
+        &-busket {
+            @include position(20px, -5px);
+        }
+    }
+    
+    &__link {
+        margin-left: 33px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    &__navigation {
+        @include size(232px, 764px);
+        position: absolute;
+        right: 0;
+        top: 100%;
+        display: none;
+        z-index: 10;
+        background-color: $white;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        
+        &-title {
+            padding: 37px 0 24px 34px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    
+        &-exit {
+            @include position(204px, 10px);
+            fill: $grey-color;
+        }
+        
+        &-exit:hover {
+            fill: $text-color;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.brand {
+    display: flex;
+
+    &__heading {
+        position: relative;
+        @include flex(column, normal, normal);
+        text-transform: uppercase;
+        @include font(48px, 900, 58px);
+
+        &-wrapper {
+            padding-left: 92px;
+            @include flex(row, normal, center);
+            flex-grow: 1;
+            background-color: $pink-color;
+        }
+
+        &--text {
+            @include font(32px, 700, 38px);
+        }
+
+        &--text::before {
+            content: '';
+            @include size(12px, 92px);
+            background: $text-color;
+            @include position(-16px, 5px);
+        }
+    } 
+}

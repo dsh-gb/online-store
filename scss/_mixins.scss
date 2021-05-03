@@ -1,0 +1,23 @@
+@mixin font($size : 14px, $weight : 300, $height : 17px) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin position($left, $top) {
+    position: absolute;
+    left: $left;
+    top: $top;
+}
+
+@mixin  size($widht, $height) {
+    width: $widht;
+    height: $height;
+}
+
+@mixin flex($axis, $alig-horiz, $alig-vert) {
+    display: flex;
+    flex-direction: $axis;
+    justify-content: $alig-horiz;
+    align-items: $alig-vert;
+}

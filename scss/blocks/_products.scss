@@ -1,0 +1,104 @@
+.products {
+    @include flex(column, normal, center);
+
+    &__heading {
+        margin-bottom: 6px;
+        @include font(30px, 400, 36px);
+        color: $black-color;
+    }
+    
+    &__text {
+        margin-bottom: 48px;
+        font-weight: 400;
+        color: $grey-text;
+    }
+    
+    &__list {
+        @include flex(row, space-between, normal);
+        flex-wrap: wrap;
+    }
+    
+    &__item {
+        @include size(360px, 581px);
+        margin-bottom: 30px;
+
+        &-wrapper {
+            position: relative;
+        }
+        
+        &-overlay {
+            width: 100%;
+            min-height: 420px;
+            display: none;
+            position: absolute;
+            top: 0;
+            background: rgba(58, 56, 56, 0.86);
+        }
+
+        &-image {
+            width: 100%;
+            min-height: 420px;
+        }
+        
+        &-heading {
+            margin: 25px 0 13px 0;
+            padding-left: 18px;
+            @include font(13px, 400, 16px);
+            text-transform: uppercase;
+        }
+        
+        &-text {
+            margin-bottom: 18px;
+            padding: 0 30px 0 18px;
+            color: $greblack-text;
+        }
+        
+        &-price {
+            padding-left: 18px;
+            @include font(16px, 400, 19px);
+        }
+        
+        &-button {
+            @include size(138px, 43px);
+            display: none;
+            border: 1px solid $white;
+            background-color: rgba(0, 0, 0, 0);
+            color: $white;
+            font-weight: 400;
+        }
+        
+        &:hover .products__item-button {
+            @include flex(row, space-around, center);
+            @include position(50%, 50%);
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover .products__item-overlay {
+            display: block;
+        }
+        
+        &-button:hover {
+            border: 1px solid $text-color;
+            color: $text-color;
+            cursor: pointer;
+        }
+        
+        &-button:hover svg{
+            fill: $text-color;
+        }
+    }    
+    
+    &__button {
+        @include size(211px, 47px);
+        margin-bottom: 96px;
+        color: $button-color;
+        border: 1px solid $pinkred;
+        background-color: $white;
+
+        &:hover {
+            background-color: $text-color;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+}
