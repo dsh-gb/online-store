@@ -8,9 +8,7 @@
     }
     
     &__heading {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex(row, space-between, center);
         text-transform: uppercase;
         font-weight: 400;
         color: $grey-color;
