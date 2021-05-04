@@ -1364,12 +1364,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: uppercase;
   font-weight: 400;
   color: #6F6E6E;
@@ -1512,5 +1516,46 @@ body {
 
 .dropdowns__sublist-link:hover {
   color: #F16D7F;
+}
+
+.pagination {
+  margin: 18px 0 96px 0;
+  width: 283px;
+  height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination__link {
+  text-decoration: none;
+  color: #6F6E6E;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.pagination__link:hover:not(.pagination__link--active) {
+  color: #F16D7F;
+  font-weight: 700;
+}
+
+.pagination__link--active {
+  color: #EF5B70;
+  cursor: default;
+}
+
+.pagination__link--size {
+  padding-top: 3px;
 }
 /*# sourceMappingURL=style.css.map */
