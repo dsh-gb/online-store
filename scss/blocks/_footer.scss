@@ -4,6 +4,10 @@
     &__wrapper {
         min-height: 79px;
         @include flex(row, space-between, center);
+        @include mobile {
+            min-height: 143px;
+            @include flex(column-reverse, flex-end, center);
+        };
     }
     
     &__copy {
@@ -13,6 +17,9 @@
     
     &__social {
         @include flex(row, space-between, normal);
+        @include mobile {
+            margin: 43px 0 40px 0;
+        };
 
         &-link {
             @include size(32px, 32px);

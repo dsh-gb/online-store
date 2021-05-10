@@ -1,13 +1,53 @@
 .cart {
     @include flex(row, space-between, normal);
+    @include tablet {
+        @include flex(column, normal, center);
+    };
 
     &__product {
         padding-top: 96px;
+        @include mobile {
+            padding-top: 39px;
+        };
+
+        &-button {
+            margin-top: 32px;
+            @include flex(row, space-between, normal);
+        }
+        
+        &-link {
+            @include size(235px, 50px);
+            margin-bottom: 128px;
+            @include flex(row, center, center);
+            border: 1px solid $greyblack;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include tablet {
+                margin-bottom: 64px;
+            };
+            @include mobile {
+                margin-bottom: 48px;
+                @include size(175px, 33px);
+                @include font(12px, 400, 14px);
+                text-transform: none;
+            };
+    
+            &:hover {
+                border: none;
+                color: $white;
+                background-color: $text-color;
+                font-weight: 700;
+            }
+        }
     }
     
     &__item {
         @include size(652px, 306px);
         margin-bottom: 40px;
+        @include mobile {
+            @include size(358px, 188px);
+            margin-bottom: 32px;
+        };
         display: flex;
         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.13);
 
@@ -17,6 +57,9 @@
         
         &-image {
             @include size(262px, 306px);
+            @include mobile {
+                @include size(40%, auto);
+            };
         }
         
         &-heading {
@@ -24,12 +67,19 @@
             text-transform: uppercase;
             color: $black-color;
             @include font(24px, 400, 29px);
+            @include mobile {
+                padding: 13px 60px 26px 17px;
+                @include font(16px, 400, 19px);
+            };
         }
         
         &-description {
             padding: 0 0 6px 32px;
-            @include font(22px, 400, 26px);
             color: $grey-cart;
+            @include font(22px, 400, 26px);
+            @include mobile {
+                @include font(14px, 400, 17px);
+            };
         }
         
         &-description--quantity {
@@ -46,11 +96,16 @@
             &::placeholder {
                 padding-left: 16px;
                 @include font(18px, 400, 22px);
+                @include mobile {
+                    @include font(10px, 400, 12px);
+                };
             }
         }
         
         &-exit {
-            @include position(350px, 28px);
+            position: absolute;
+            right: 24px;
+            top: 28px;
             fill: $grey-cart;
 
             &:hover {
@@ -60,33 +115,21 @@
         }
     }
     
-    &__product-button {
-        margin-top: 32px;
-        @include flex(row, space-between, normal);
-    }
-    
-    &__product-link {
-        @include size(235px, 50px);
-        margin-bottom: 128px;
-        @include flex(row, center, center);
-        border: 1px solid $greyblack;
-        text-decoration: none;
-        text-transform: uppercase;
-
-        &:hover {
-            border: none;
-            color: $white;
-            background-color: $text-color;
-            font-weight: 700;
-        }
-    }
-    
     &__adress {
-        @include flex(column, normal, normal);
+        @include flex(column, normal, flex-end);
+        @include tablet {
+            @include flex(row, space-around, normal);
+        };
+        @include mobile {
+            @include flex(column, normal, center);
+        };
 
         &-form {
-            @include size(360px, 272px);
+            @include size(360px, auto);
             margin-top: 113px;
+            @include tablet {
+                margin-top: 0;
+            };
             @include flex(column, normal, normal);
         }
 
@@ -109,6 +152,12 @@
         &-submit {
             @include size(100px, 34px);
             margin-top: 24px;
+            @include tablet {
+                margin-bottom: 128px;
+            };
+            @include mobile {
+                margin-bottom: 8px;
+            };
             @include flex(row, space-around, center);
             border: 1px solid $greyblack;
             background-color: $white;
@@ -130,11 +179,18 @@
     &__order {
         @include size(360px, 214px);
         margin-top: 57px;
-        position: relative;
+        @include flex(column, normal, flex-end);
+        @include tablet {
+            margin-top: 40px;
+        };
+        @include mobile {
+            margin-bottom: 96px;
+            @include size(96%, 214px);
+        };
         background-color: $order-fon;
 
         &-sub {
-            @include position(218px, 39px);
+            padding: 39px 34px 12px 0;
             text-transform: uppercase;
             @include font(11px, 400, 13px);
 
@@ -144,7 +200,7 @@
         }
 
         &-grand {
-            @include position(153px, 64px);
+            padding: 0 34px 21px 0;
             text-transform: uppercase;
             @include font(16px, 300, 19px);
 
@@ -156,13 +212,13 @@
         }
 
         &-line {
-            @include position(43px, 104px);
+            padding: 0 34px 17px 0;
             fill: $line-fon;
         }
 
         &-link {
             @include size(273px, 50px);
-            @include position(44px, 122px);
+            margin-right: 34px;
             @include flex(row, center, center);
             background-color: $text-color;
             text-transform: uppercase;

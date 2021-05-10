@@ -1,13 +1,28 @@
 .stocks {
     &__list {
         margin-top: 64px;
+        @include tablet {
+            margin-top: 20px;
+        };
+        @include mobile {
+            margin-top: 64px;
+        };
         @include flex(row, space-between, normal);
         flex-wrap: wrap;
     }
     
     &__item {
-        width: 360px;
+        width: 32%;
         min-height: 260px;
+        @include tablet {
+            min-height: 167px;
+        };
+        @include mobile {
+            width: 100%;
+            min-height: 247px;
+            margin-bottom: 32px;
+        };
+        background-size: cover;
         @include flex(row, center, center);
         text-align: center;
     
@@ -39,7 +54,16 @@
         
         &--accesories {
             width: 100%;
+            min-height: 180px;
             margin: 30px 0 97px 0;
+            @include tablet {
+                min-height: 116px;
+                margin-bottom: 155px;
+            };
+            @include mobile {
+                min-height: 111px;
+                margin: 0 0 64px 0;
+            };
             background-image: url(../img/accesories.jpg);
         }
     }

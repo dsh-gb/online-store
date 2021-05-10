@@ -1,10 +1,19 @@
 .registration {
     @include flex(row, space-between, normal);
+    @include mobile{
+        @include flex(column, normal, center);
+    };
 }
 
 .form {
-    width: 360px;
+    max-width: 360px;
     margin: 64px 128px 0 0;
+    @include tablet {
+        margin: 40px 0 0 0;
+    };
+    @include mobile {
+        width: auto;
+    };
     @include flex(column, normal, normal);
 
     &__name {
@@ -13,11 +22,11 @@
     }
     
     &__input {
-        @include size(360px, 45px);
+        @include size(auto, 45px);
         margin-top: 20px;
-        padding-left: 17px;
 
         &::-webkit-input-placeholder {
+            padding-left: 17px;
             @include font(13px, 300, 16px);
             color: $grey-placeholder;
         }
@@ -32,6 +41,9 @@
     &__submit {
         @include size(167px, 50px);
         margin-bottom: 96px;
+        @include mobile {
+            margin-bottom: 0;
+        };
         border-style: none;
         background-color: $text-color;
 
@@ -98,14 +110,25 @@
 .loyalty {
     width: 652px;
     @include font(24px, 300, 29px);
+    @include tablet {
+        width: 45%;
+        @include font(16px, 300, 19px);
+    };
+    @include mobile {
+        width: 100%;
+    };
 
     &__text--title {
         margin: 64px 0 22px 0;
+        @include tablet {
+            margin: 40px 0 32px 0;
+        };
         text-transform: uppercase;
     }
     
     &__list {
         margin-top: 21px;
+        margin-left: 23px;
     }
     
     &__list-item {

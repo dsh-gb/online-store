@@ -1,15 +1,24 @@
 .advant {
     height: 341px;
+    @include tablet {
+        min-height: 610px;
+    };
     @include flex(row, normal, center);
     background-color: $black-advant;
 
     &__list {
         @include flex(row, space-between, normal);
+        @include tablet {
+            @include flex(column, normal, center);
+        };
     }
     
     &__item {
         @include size(360px, 134px);
         @include flex(column, space-between, center);
+        @include tablet {
+            padding: 24px 0 24px 0;
+        };
 
         &-heading {
             @include font(20px, 400, 24px);
