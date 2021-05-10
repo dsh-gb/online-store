@@ -4,6 +4,9 @@
     &__wrapper {
         min-height: 148px;
         @include flex(row, space-between, center);
+        @include mobile {
+            justify-content: center;
+        };
         text-transform: uppercase;
     }
     

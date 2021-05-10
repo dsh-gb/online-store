@@ -65,3 +65,27 @@
         }
     }
 }
+
+@media (max-width: $max-tablet-width - 1) { 
+    .header {
+        &__icon--logo {
+            margin-left: 16px;
+        }
+
+        &__icon--busket {
+            margin-right: 16px;
+        }
+    }
+}
+
+@media (max-width: $max-mobile-width - 1) { 
+    .header {
+        &__icon--logo {
+            margin-left: 0;
+        }
+
+        &__link {
+            display: none;
+        }
+    }
+}
