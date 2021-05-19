@@ -5,13 +5,16 @@
         min-height: 148px;
         @include flex(row, space-between, center);
         @include mobile {
-            justify-content: center;
+            @include flex(column, center, center);
         };
         text-transform: uppercase;
     }
     
     &__heading {
         @include font(24px, 400, 29px);
+        @include mobile {
+            margin-bottom: 32px;
+        };
         text-transform: uppercase;
     }
     
