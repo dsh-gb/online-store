@@ -19,10 +19,17 @@
             @include flex(row, space-evenly, normal);
         };
         flex-wrap: wrap;
+        &--wrap {
+            flex-wrap: nowrap;
+            @include mobile {
+                flex-wrap: wrap;
+            }
+        }
     }
     
     &__item {
-        @include size(360px, 581px);
+        width: 360px;
+        min-height: 581px;
         margin: 0 0 30px 0;
         @include mobile {
             margin: 0 0 17px 0;
@@ -72,6 +79,23 @@
             background-color: rgba(0, 0, 0, 0);
             color: $white;
             font-weight: 400;
+        }
+
+        &--margin {
+            margin-bottom: 128px;
+            @include tablet {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+            @include mobile {
+                margin-bottom: 0;
+            }
+        }
+
+        &--visible {
+            @include tablet {
+                display: none;
+            };
         }
         
         &:hover .products__item-button {
