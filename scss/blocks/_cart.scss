@@ -37,6 +37,7 @@
                 color: $white;
                 background-color: $text-color;
                 font-weight: 700;
+                transition: background-color 0.9s ease;
             }
         }
     }
@@ -141,11 +142,13 @@
         &-input {
             height: 45px;
             margin-top: 20px;
+            padding-left: 17px;
             border: 1px solid $greyblack;
 
-            &::placeholder {
-                padding-left: 17px;
-                color: $black-color;
+            &:focus::-webkit-input-placeholder {
+                opacity: 0;
+                transition-timing-function: easeInQuint;
+                transition: opacity 1.0s;
             }
         }
 
@@ -193,22 +196,22 @@
             padding: 39px 34px 12px 0;
             text-transform: uppercase;
             @include font(11px, 400, 13px);
+        }
 
-            &--price {
-                padding-left: 20px;
-            }
+        &-sub-price {
+            padding-left: 20px;
         }
 
         &-grand {
             padding: 0 34px 21px 0;
             text-transform: uppercase;
             @include font(16px, 300, 19px);
+        }
 
-            &--price {
-                padding-left: 20px;
-                font-weight: 700;
-                color: $text-color;
-            }
+        &-grand-price {
+            padding-left: 20px;
+            font-weight: 700;
+            color: $text-color;
         }
 
         &-line {
@@ -230,6 +233,7 @@
                 color: $text-color;
                 font-weight: 700;
                 border: 1px solid $text-color;
+                transition: background-color 1.0s ease;
             }
         }
     }

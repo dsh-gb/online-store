@@ -8,14 +8,16 @@
     
     &__icon {
         fill: $fon-icon;
+    }
 
-        &--logo {
-            margin-right: 41px;
-        }
+    &__logo {
+        margin-right: 41px;
     }
     
     &__icon:hover {
         fill: $button-color;
+        transform: scale(1.3);
+        transition: transform 0.8s ease;
         cursor: pointer;
     } 
     

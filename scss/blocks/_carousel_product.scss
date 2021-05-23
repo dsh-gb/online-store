@@ -1,4 +1,4 @@
-.carousel_img {
+.carousel__img {
     width: 597px;
     min-height: 724px;
     @include tablet {
@@ -11,8 +11,8 @@
     }
 }
 
-.carousel_prev,
-.carousel_next {
+.carousel__prev,
+.carousel__next {
     @include size(47px, 47px);
     @include flex(row, center, center);
     font-size: 40px;
@@ -20,7 +20,7 @@
     background-color: rgba(42, 42, 42, 0.15);
 }
 
-.carousel_prev:hover, 
-.carousel_next:hover {
+.carousel__prev:hover, 
+.carousel__next:hover {
     color: $text-color;
 }
