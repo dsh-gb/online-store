@@ -84,6 +84,7 @@
         &:hover {
             color: #FFF;
             background-color:#F26376;
+            transition: background-color 0.9s ease;
         }
 
         &:hover svg {

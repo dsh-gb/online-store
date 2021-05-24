@@ -81,6 +81,10 @@
             font-weight: 400;
         }
 
+        &-icon {
+            fill: $fon-icon;
+        }
+
         &--margin {
             margin-bottom: 128px;
             @include tablet {
@@ -119,17 +123,20 @@
         }
     }    
     
-    &__button {
+    &__link {
         @include size(211px, 47px);
+        @include font(16px, 400, 19px);
+        @include flex(row, center, center);
         margin-bottom: 96px;
-        color: $button-color;
         border: 1px solid $pinkred;
         background-color: $white;
+        text-decoration: none;
+        color: $button-color;
 
         &:hover {
             background-color: $text-color;
             color: $white;
-            cursor: pointer;
+            transition: color  0.9s ease, background-color  0.9s ease;
         }
     }
 }
