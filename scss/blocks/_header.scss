@@ -4,6 +4,7 @@
     &__wrapper {
         min-height: 75px;
         @include flex(row, space-between, center);
+        flex-wrap: wrap;
     }
     
     &__icon {
@@ -13,7 +14,7 @@
     &__logo {
         margin-right: 41px;
     }
-    
+
     &__icon:hover {
         fill: $button-color;
         transform: scale(1.3);

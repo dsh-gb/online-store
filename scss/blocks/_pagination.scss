@@ -1,7 +1,11 @@
 .pagination {
-    margin: 18px 0 96px 0;
-    @include size(283px, 43px);
-    @include flex(row, space-between, center);
+    @include flex(row, center, normal);
+
+    &__wrapper {
+        margin: 18px 0 96px 0;
+        @include size(283px, 43px);
+        @include flex(row, space-between, center);
+    }
 
     &__link {
         text-decoration: none;
@@ -12,7 +16,7 @@
             color: $text-color;
             font-weight: 700;
         }
-        
+            
         &--active {
             color: $pink-pagination;
             cursor: default;

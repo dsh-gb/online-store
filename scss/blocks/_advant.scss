@@ -14,7 +14,8 @@
     }
     
     &__item {
-        @include size(360px, 134px);
+        width: 360px;
+        min-height: 134px;
         @include flex(column, space-between, center);
         @include tablet {
             padding: 24px 0 24px 0;

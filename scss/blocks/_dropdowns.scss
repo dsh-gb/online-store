@@ -2,13 +2,28 @@
     margin-bottom: 65px;
     margin-top: 51px;
     display: flex;
+    align-items: center;
+    @include tablet {
+        justify-content: space-between;
+    }
+    @include mobile {
+
+    }
 
     &__item {
         position: relative;
     }
+
+    &__wrapper {
+        display: flex;
+    }
     
     &__heading {
         @include flex(row, space-between, center);
+        @include font(14px, 400, 17px);
+        @include mobile {
+            @include font(12px, 400, 14px);
+        }
         text-transform: uppercase;
         font-weight: 400;
         color: $grey-color;
@@ -17,14 +32,20 @@
             margin: 0 304px 0 16px;
             font-weight: 600;
             color: #000;
+            @include tablet {
+                margin-left: 0;
+            }
+            @include mobile {
+                display: none;
+            }
         }
         
-        &--trending {
-            margin-right: 28px;
-        }
-        
+        &--trending,
         &--size {
             margin-right: 28px;
+            @include mobile {
+                margin-right: 23px;
+            }
         }
         
         &:hover {
@@ -41,6 +62,13 @@
             fill: $text-color;
         }
     }
+
+    &__icon-filter {
+        display: none;
+        @include mobile {
+            display: block;
+        }
+    }
     
     &__list {
         display: none;
@@ -51,6 +79,9 @@
         &--filter {
             @include size(360px, 485px);
             @include position(0px, 22px);
+            @include mobile {
+                top: 28px;
+            }
         }
         
         &--trending {
