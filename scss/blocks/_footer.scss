@@ -4,6 +4,7 @@
     &__wrapper {
         min-height: 79px;
         @include flex(row, space-between, center);
+        flex-wrap: wrap;
         @include mobile {
             min-height: 143px;
             @include flex(column-reverse, flex-end, center);
